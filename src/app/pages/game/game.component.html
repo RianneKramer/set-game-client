@@ -1,1 +1,15 @@
-<p>game works!</p>
+<h2>Game</h2>
+
+@if (!isFinished) {
+  <div class="table">
+    @for (card of cards; track card.cardId) {
+      <app-card [cardId]="card.cardId"/>
+    }
+  </div>
+  <button (click)="drawCard()">Draw Card</button>
+  <button (click)="endGame()">End Game</button>
+  <button (click)="getHint()">Hint</button>
+} @else {
+  <h3>GAME ENDED</h3>
+  <button (click)="deleteGame()">Delete</button>
+}

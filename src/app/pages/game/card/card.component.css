@@ -1,0 +1,17 @@
+.imgCount {
+    width: 5rem;
+    height: 12rem;
+    margin: auto;
+    align-content: center;
+}
+
+button {
+    width: 10rem;
+    height: 12rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: lightgray;
+}

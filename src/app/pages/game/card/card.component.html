@@ -1,0 +1,9 @@
+<div class="card">
+  <button>
+    <div class="imgCount">
+      @for (_ of getArray(props.count); track $index) {
+        <img [src]="imagePath()" alt="" [style.top.px]="$index * 8"/>
+      }
+    </div>
+  </button>
+</div>
