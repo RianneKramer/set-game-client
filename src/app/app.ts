@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './core/components/header/header.component';
+import { LoginStore } from './features/auth/data-access/login.store';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,9 @@ import { HeaderComponent } from './components/header/header.component';
 })
 export class App {
   protected readonly title = signal('set-game-client');
+  private loginStore = inject(LoginStore);
+
+  constructor() {
+    this.loginStore.init();
+  }
 }

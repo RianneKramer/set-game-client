@@ -1,0 +1,57 @@
+@if (loading()) {
+  <span class="spinner"></span>
+} @else {
+  <div class="game-container">
+    @if (!game()?.isFinished) {
+
+      <div class="game-layout">
+
+        <!-- BOARD -->
+        <div class="board">
+          @for (card of tableCards(); track card.cardId) {
+            <app-card
+              [cardId]="card.cardId"
+              [highlighted]="isHinted(card.cardId)"
+              [selected]="isSelected(card.cardId)"
+              (click)="onToggleCard(card.cardId)"
+            ></app-card>
+          }
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+          <!-- Stats -->
+          <div class="card stats">
+            <h3>Game Info</h3>
+            <p>Available sets: <strong>{{ availableSetCount() }}</strong></p>
+            <p>Sets found: <strong>{{ setsFound() }}</strong></p>
+            <p>Deck left: <strong>{{ deckCards() }}</strong></p>
+          </div>
+
+          <!-- Actions -->
+          <div class="card actions">
+            <button (click)="onDrawCard()">Draw Card</button>
+            <button (click)="onConfirmSet()">Check Set</button>
+            <button (click)="onGetHint()">Hint</button>
+            <button class="danger" (click)="onEndGame()">End Game</button>
+          </div>
+
+        </div>
+      </div>
+
+    } @else {
+
+      <!-- END SCREEN -->
+      <div class="end-screen">
+        <h2>Game Finished</h2>
+        <p>Total sets found: {{ setsFound() }}</p>
+
+        <div class="end-actions">
+          <button (click)="onPlayAgain()">Play Again</button>
+          <button class="secondary" (click)="onDeleteGame()">Delete Game</button>
+        </div>
+      </div>
+    }
+  </div>
+}

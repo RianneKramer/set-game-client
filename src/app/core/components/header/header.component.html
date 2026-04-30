@@ -1,0 +1,12 @@
+<header>
+  <div class="logo">Set Game</div>
+  <nav>
+    <a href="/public" class="nav-link">Home</a>
+    <a href="/game" class="nav-link">Game</a>
+    @if (isLoggedIn()) {
+      <a href="/profile" class="header-button">Profile</a>
+    } @else {
+      <a href="/login" class="header-button">Login</a>
+    }
+  </nav>
+</header>
