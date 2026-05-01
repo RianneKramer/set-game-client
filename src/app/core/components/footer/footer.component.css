@@ -1,0 +1,33 @@
+.footer {
+    margin-top: 3rem;
+    padding: 1rem 0;
+
+    border-top: 1px solid #e5e7eb;
+    background: #fafafa;
+    display: block;
+}
+
+/* Content layout */
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* Link */
+.github-link {
+    text-decoration: none;
+    color: #4f46e5;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.github-link:hover {
+    color: #4338ca;
+}
