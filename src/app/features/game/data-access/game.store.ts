@@ -126,7 +126,6 @@ export class GameStore {
   }
 
   confirmSet(gameId: number) {
-    this._loading.set(true);
     const selected = this._selectedCards();
 
     this.gameService.confirmSet(gameId, selected).subscribe({
@@ -167,8 +166,6 @@ export class GameStore {
   }
 
   getAvailableSets(gameId: number) {
-    this._loading.set(true);
-
     this.gameService.availableSets(gameId).subscribe({
       next: (count) => {
         this._availableSetCount.set(count);

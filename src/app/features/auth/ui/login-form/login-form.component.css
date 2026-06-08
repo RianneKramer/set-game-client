@@ -97,32 +97,6 @@ button:disabled {
   cursor: not-allowed;
 }
 
-.form-debug {
-  text-align: left;
-  background: rgba(0, 0, 0, 0.2);
-  border: 0.0625rem solid rgba(255, 255, 255, 0.2);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 0;
-}
-
-.form-debug h3 {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  margin: 0 0 0.75rem 0;
-  text-transform: uppercase;
-  letter-spacing: 0.03125rem;
-}
-
-.form-debug p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.8125rem;
-  margin: 0.375rem 0;
-  font-family: 'Courier New', monospace;
-}
-
 @media (max-width: 30rem) {
   form {
     margin: 1.25rem;

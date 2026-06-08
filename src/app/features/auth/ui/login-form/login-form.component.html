@@ -30,9 +30,3 @@
   <button type="submit" [disabled]="loginForm().invalid()">Log in</button>
 
 </form>
-
-<div class="form-debug">
-  <h3>Current Form Values:</h3>
-  <p>Username: {{ loginForm.username().value() }}</p>
-  <p>Password: {{ loginForm.password().value() ? '••••••••' : '(empty)' }}</p>
-</div>

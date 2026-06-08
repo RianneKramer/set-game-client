@@ -10,7 +10,7 @@ import { LoginStore } from '../../data-access/login.store';
   styleUrl: './profile.component.css',
 })
 export class ProfileComponent {
-  private loginStore = inject(LoginStore)
+  private loginStore = inject(LoginStore);
   private router = inject(Router);
 
   constructor() {
@@ -20,5 +20,4 @@ export class ProfileComponent {
       }
     });
   }
-
 }

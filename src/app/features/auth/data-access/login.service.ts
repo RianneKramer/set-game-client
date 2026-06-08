@@ -20,8 +20,4 @@ export class LoginService {
   postLogin(login: Login) {
     return this.configService.post<LoginResponse>(this.loginUrl() + this.endpoints.login, login);
   }
-
-  getAuth(){
-    return this.configService.get(this.loginUrl());
-  }
 }

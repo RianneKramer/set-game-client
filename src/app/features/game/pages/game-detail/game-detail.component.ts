@@ -24,6 +24,7 @@ export class GameDetailComponent implements OnInit {
   isHinted = this.gameStore.isHinted;
   availableSetCount = this.gameStore.availableSetCount;
   setsFound = this.gameStore.setsFound;
+  isFinished = this.gameStore.isFinished;
 
   gameId!: number;
 

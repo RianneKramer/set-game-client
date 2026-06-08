@@ -13,9 +13,9 @@ export class LoginStore {
 
   private logoutTimer: any;
 
-  token = this._token.asReadonly();
-  loading = this._loading.asReadonly();
-  error = this._error.asReadonly();
+  // token = this._token.asReadonly();
+  // loading = this._loading.asReadonly();
+  // error = this._error.asReadonly();
 
   isLoggedIn = computed(() => !!this._token());
 
